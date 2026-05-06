@@ -53,9 +53,6 @@ class Session
         return $_SESSION['salt'] ?? '';
     }
 
-    /**
-     * Reikalauja prisijungimo – jei ne, nukreipia į login puslapį.
-     */
     public static function requireLogin(): void
     {
         if (!self::isLoggedIn()) {
