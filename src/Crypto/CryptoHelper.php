@@ -8,9 +8,6 @@ namespace App\Crypto;
 
 class CryptoHelper
 {
-    // ------------------------------------------------------------------ //
-    //  FAILO LYGIO AES šifravimas (programos atidarymui / uždarymui)      //
-    // ------------------------------------------------------------------ //
 
     /**
      * Užšifruoja failo turinį AES-256-CBC algoritmu.
@@ -58,10 +55,6 @@ class CryptoHelper
 
         return $plaintext;
     }
-
-    // ------------------------------------------------------------------ //
-    //  ĮRAŠO LYGIO AES šifravimas (individualūs slaptažodžiai)            //
-    // ------------------------------------------------------------------ //
 
     /**
      * Užšifruoja vieną slaptažodžio reikšmę.
