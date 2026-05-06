@@ -26,7 +26,7 @@ $username = $loggedIn ? Session::getUsername() : '';
 <body>
 
 <?php if (!$loggedIn): ?>
-<!-- ==================== PRISIJUNGIMO EKRANAS ==================== -->
+
 <div class="auth-screen" id="authScreen">
     <div class="auth-bg">
         <div class="auth-grid"></div>
@@ -89,7 +89,7 @@ $username = $loggedIn ? Session::getUsername() : '';
 </div>
 
 <?php else: ?>
-<!-- ==================== PAGRINDINĖ PROGRAMA ==================== -->
+
 <div class="app" id="app">
 
     <!-- Šoninė juosta -->

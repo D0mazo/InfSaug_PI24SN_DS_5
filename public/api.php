@@ -25,10 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $input  = json_decode(file_get_contents('php://input'), true) ?? [];
 $action = $input['action'] ?? '';
 
-// ------------------------------------------------------------------ //
-//  VIEŠI VEIKSMAI (be prisijungimo)                                   //
-// ------------------------------------------------------------------ //
-
 if ($action === 'register') {
     try {
         $auth = new AuthManager();
@@ -61,10 +57,6 @@ if ($action === 'login') {
     }
     exit;
 }
-
-// ------------------------------------------------------------------ //
-//  APSAUGOTI VEIKSMAI (reikia prisijungimo)                           //
-// ------------------------------------------------------------------ //
 
 if (!Session::isLoggedIn()) {
     http_response_code(401);

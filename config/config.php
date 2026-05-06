@@ -32,5 +32,5 @@ define('HASH_OPTIONS', [
     'threads'     => 2,
 ]);
 
-// Atsitiktinio slaptažodžio nustatymai
+
 define('DEFAULT_PWD_LENGTH', 16);

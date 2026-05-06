@@ -27,10 +27,6 @@ class AuthManager
         $this->usersFile = DATA_PATH . '/users.json';
     }
 
-    // ------------------------------------------------------------------ //
-    //  REGISTRACIJA                                                        //
-    // ------------------------------------------------------------------ //
-
     /**
      * Registruoja naują vartotoją.
      *
@@ -64,10 +60,6 @@ class AuthManager
 
         $this->saveUsers($users);
     }
-
-    // ------------------------------------------------------------------ //
-    //  PRISIJUNGIMAS                                                       //
-    // ------------------------------------------------------------------ //
 
     /**
      * Patikrina prisijungimo duomenis.
@@ -104,10 +96,6 @@ class AuthManager
             'salt'     => $userData['salt'],
         ];
     }
-
-    // ------------------------------------------------------------------ //
-    //  VIDINIAI METODAI                                                    //
-    // ------------------------------------------------------------------ //
 
     private function loadUsers(): array
     {

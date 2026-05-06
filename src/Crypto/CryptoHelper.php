@@ -109,9 +109,6 @@ class CryptoHelper
         return $plaintext;
     }
 
-    // ------------------------------------------------------------------ //
-    //  RAKTO GENERAVIMAS iš vartotojo slaptažodžio (PBKDF2)               //
-    // ------------------------------------------------------------------ //
 
     /**
      * Generuoja 32 baitų AES raktą iš paprasto teksto naudojant PBKDF2.
@@ -134,10 +131,6 @@ class CryptoHelper
     {
         return bin2hex(random_bytes(32));
     }
-
-    // ------------------------------------------------------------------ //
-    //  ATSITIKTINIO SLAPTAŽODŽIO GENERATORIUS                             //
-    // ------------------------------------------------------------------ //
 
     /**
      * Sugeneruoja kriptografiškai saugų atsitiktinį slaptažodį.

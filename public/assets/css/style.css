@@ -1,7 +1,4 @@
-/* ================================================================
-   SecureVault – Stilių failas
-   Tema: Tamsus, pramoninis, monospaced akcentai
-   ================================================================ */
+
 
 :root {
     --bg-0:      #0a0c10;
@@ -35,7 +32,7 @@ body {
     line-height: 1.6;
 }
 
-/* ========================= AUTH EKRANAS ========================= */
+
 .auth-screen {
     min-height: 100vh;
     display: flex;
@@ -140,14 +137,14 @@ body {
 .auth-message.ok  { color: var(--accent); }
 .auth-message.err { color: var(--danger); }
 
-/* ========================= LAYOUT ========================= */
+
 .app {
     display: grid;
     grid-template-columns: 220px 1fr;
     min-height: 100vh;
 }
 
-/* ========================= SIDEBAR ========================= */
+
 .sidebar {
     background: var(--bg-1);
     border-right: 1px solid var(--border);
@@ -214,7 +211,7 @@ body {
     white-space: nowrap;
 }
 
-/* ========================= MAIN ========================= */
+
 .main-content {
     padding: 2rem;
     overflow-y: auto;
@@ -242,7 +239,6 @@ body {
     color: var(--text-1);
 }
 
-/* ========================= FORM ========================= */
 .form-card {
     background: var(--bg-1);
     border: 1px solid var(--border);
@@ -320,7 +316,7 @@ textarea { resize: vertical; }
 
 .mt-1 { margin-top: 0.4rem; }
 
-/* ========================= BUTTONS ========================= */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -359,7 +355,6 @@ textarea { resize: vertical; }
 .btn-sm  { padding: 0.35rem 0.75rem; font-size: 0.82rem; }
 .btn-full { width: 100%; justify-content: center; }
 
-/* ========================= RECORDS GRID ========================= */
 .records-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -417,7 +412,7 @@ textarea { resize: vertical; }
     font-size: 0.9rem;
 }
 
-/* ========================= SEARCH RESULT ========================= */
+
 .search-bar {
     display: flex;
     gap: 0.6rem;
@@ -473,7 +468,7 @@ textarea { resize: vertical; }
     margin-bottom: 1rem;
 }
 
-/* ========================= GENERATOR ========================= */
+
 .generator-card { max-width: 480px; }
 
 .gen-output {
@@ -524,7 +519,7 @@ textarea { resize: vertical; }
     height: 15px;
 }
 
-/* ========================= TOAST ========================= */
+
 .toast {
     position: fixed;
     bottom: 1.5rem;
@@ -550,10 +545,10 @@ textarea { resize: vertical; }
 .toast.ok  { border-left: 3px solid var(--accent); }
 .toast.err { border-left: 3px solid var(--danger); }
 
-/* ========================= UTILS ========================= */
+
 .hidden { display: none !important; }
 
-/* ========================= SCROLLBAR ========================= */
+
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-1); }
 ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }

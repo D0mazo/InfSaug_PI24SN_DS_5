@@ -34,10 +34,6 @@ class FileManager
         $this->records  = [];
     }
 
-    // ------------------------------------------------------------------ //
-    //  FAILO VALDYMAS                                                      //
-    // ------------------------------------------------------------------ //
-
     /**
      * Atidaro vartotojo failą:
      *  - Jei failas neegzistuoja – sukuria tuščią
@@ -71,10 +67,6 @@ class FileManager
         $encoded = CryptoHelper::encryptFile($csv, $this->fileKey);
         file_put_contents($this->filePath, $encoded, LOCK_EX);
     }
-
-    // ------------------------------------------------------------------ //
-    //  CRUD OPERACIJOS                                                     //
-    // ------------------------------------------------------------------ //
 
     /**
      * Prideda naują slaptažodžio įrašą.
@@ -229,9 +221,6 @@ class FileManager
         ], $this->records);
     }
 
-    // ------------------------------------------------------------------ //
-    //  VIDINIAI PAGALBINIAI METODAI                                        //
-    // ------------------------------------------------------------------ //
     private function findByName(string $name): ?array
     {
         foreach ($this->records as $record) {

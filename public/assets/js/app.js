@@ -5,10 +5,6 @@
 
 'use strict';
 
-/* ================================================================
-   PAGALBINIAI ĮRANKIAI
-   ================================================================ */
-
 const API = 'api.php';
 
 /** Siunčia POST užklausą į API */
@@ -54,10 +50,6 @@ async function copyToClipboard(text) {
     }
 }
 
-/* ================================================================
-   AKIES MYGTUKAI (slaptažodžio rodymas / slėpimas)
-   ================================================================ */
-
 document.addEventListener('click', e => {
     if (!e.target.classList.contains('eye-btn')) return;
     const targetId = e.target.dataset.target;
@@ -67,11 +59,6 @@ document.addEventListener('click', e => {
     e.target.textContent = inp.type === 'password' ? '👁' : '🙈';
 });
 
-/* ================================================================
-   AUTH EKRANAS
-   ================================================================ */
-
-// Tab perjungimas
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -157,10 +144,6 @@ document.getElementById('registerBtn')?.addEventListener('click', async () => {
     });
 });
 
-/* ================================================================
-   NAVIGACIJA (šoninė juosta)
-   ================================================================ */
-
 document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -173,18 +156,10 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     });
 });
 
-/* ================================================================
-   ATSIJUNGIMAS
-   ================================================================ */
-
 document.getElementById('logoutBtn')?.addEventListener('click', async () => {
     await apiCall('logout');
     window.location.reload();
 });
-
-/* ================================================================
-   ĮRAŠŲ SĄRAŠAS
-   ================================================================ */
 
 async function loadRecords() {
     const grid = document.getElementById('recordsGrid');
@@ -275,10 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('refreshBtn')?.addEventListener('click', loadRecords);
 
-/* ================================================================
-   PRIDĖJIMAS
-   ================================================================ */
-
 document.getElementById('addBtn')?.addEventListener('click', async () => {
     const name     = document.getElementById('addName')?.value.trim();
     const password = document.getElementById('addPassword')?.value;
@@ -327,10 +298,6 @@ document.getElementById('fillGeneratedBtn')?.addEventListener('click', () => {
         document.querySelector('[data-view="generator"]')?.click();
     }
 });
-
-/* ================================================================
-   PAIEŠKA / REDAGAVIMAS / IŠTRYNIMAS
-   ================================================================ */
 
 let currentSearchName = '';
 
@@ -446,10 +413,6 @@ document.getElementById('deleteBtn')?.addEventListener('click', async () => {
         showToast(res.error, 'err');
     }
 });
-
-/* ================================================================
-   SLAPTAŽODŽIŲ GENERATORIUS
-   ================================================================ */
 
 document.getElementById('genLength')?.addEventListener('input', function () {
     document.getElementById('lenDisplay').textContent = this.value;
