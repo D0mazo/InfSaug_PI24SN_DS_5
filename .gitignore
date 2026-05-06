@@ -1,0 +1,15 @@
+# Duomenų failai (nekelti į repozitoriją)
+/data/
+
+# IDE failai
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS failai
+.DS_Store
+Thumbs.db
+
+# PHP klaidos log
+php_errors.log
